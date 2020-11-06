@@ -1,0 +1,66 @@
+<%@page import="com.cdac.dto.Car"%>
+<%@page import="java.util.List"%>
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<table align="center" >
+		
+		
+		
+		
+		<% 
+		List<Car> elist = (List<Car>)request.getAttribute("carList");
+		for(Car exp : elist){
+		%>
+		<tr>
+			<td>
+			<%=exp.getCarNo()%>
+			 </td>
+			 
+			 <td>
+			<%=exp.getLicNo()%>
+			 </td>
+			 
+			  <td>
+			<%=exp.getCategory()%>
+			 </td>
+			 
+			  <td>
+			<%=exp.getSource()%>
+			 </td>
+			 
+			  <td>
+			<%=exp.getManufacturer()%>
+			 </td>
+			 
+			   <td>
+			<%=exp.getColour()%>
+			 </td>
+			 
+			   <td>
+			<%=exp.getOwnerName()%>
+			 </td>
+			
+			<td>
+				<a href="car_delete.htm?carNo=<%=exp.getCarNo()%>">Delete</a>
+			</td>
+			<td>
+				<a href="car_update_form.htm?carNo=<%=exp.getCarNo()%>">Update</a>
+			</td>
+			
+		</tr>
+		<% } %>
+		<tr>
+		
+	</table>
+
+</body>
+</html>

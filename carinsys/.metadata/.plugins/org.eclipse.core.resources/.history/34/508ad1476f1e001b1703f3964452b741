@@ -1,0 +1,27 @@
+package com.cdac.cntr;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.cdac.dto.Admin;
+
+@Controller
+public class LoginController {
+
+	@RequestMapping(value="/login.htm")
+	public String validateAdmin(HttpServletRequest req) {
+		String name=req.getParameter("AdminName");
+		String pass=req.getParameter("AdminPass");
+		Admin f=new Admin();
+		
+		if(f.getUsername().equals(name)&& f.getPassword().equals(pass)) {
+			
+			return "home";
+		}
+		else {
+			return "index";
+		}	
+	}
+}

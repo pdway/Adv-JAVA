@@ -1,0 +1,56 @@
+<%@page import="com.cdac.dto.Ins"%>
+<%@page import="java.util.List"%>
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<table align="center" >
+		
+		
+		
+		
+		<% 
+		List<Ins> elist = (List<Ins>)request.getAttribute("insList");
+		for(Ins exp : elist){
+		%>
+		<tr>
+			<td>
+			<%=exp.getInsNo()%>
+			 </td>
+			 
+			 <td>
+			<%=exp.getLicNo()%>
+			 </td>
+			 
+			  <td>
+			<%=exp.getProvider()%>
+			 </td>
+			 
+			  <td>
+			<%=exp.getInsValidDate()%>
+			 </td>
+			 
+			  <td>
+			<%=exp.getInsHolder()%>
+			 </td>
+			
+			<td>
+				<a href="ins_delete.htm?insNo=<%=exp.getInsNo()%>">Delete</a>
+			</td>
+			<td>
+				<a href="ins_update_form.htm?insNo=<%=exp.getInsNo()%>">Update</a>
+			</td>
+			
+		</tr>
+		<% } %>
+		<tr>
+		
+	</table>
+</body>
+</html>

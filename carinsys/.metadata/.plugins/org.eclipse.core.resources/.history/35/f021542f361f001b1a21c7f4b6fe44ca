@@ -1,0 +1,27 @@
+<%@page import="com.cdac.dto.User"%>
+<%@page import="java.util.List"%>
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>User Details</title>
+</head>
+<body>
+<table align="center" >
+		
+		
+		<tr>
+			<td> <a href="prep_add_user_form1.htm" >Add User Details</a> </td>
+		</tr>
+		<tr>
+			<td> <a href="user_list.htm" >User List</a> </td>
+		</tr>
+		
+		
+		
+	</table>
+</body>
+</html>

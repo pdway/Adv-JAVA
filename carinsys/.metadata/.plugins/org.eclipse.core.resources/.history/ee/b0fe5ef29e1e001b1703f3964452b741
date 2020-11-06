@@ -1,0 +1,37 @@
+ <%@ taglib uri="http://www.springframework.org/tags/form" prefix="spr" %> 
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<spr:form action="search_user.htm" method ="post" commandName="user">
+	<table align="center" >
+		<tr>
+			<td>
+				License No.:
+			</td>
+			<td>
+				<spr:input path="licNo"/>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				<a href="userpage.jsp" >Back</a>
+			</td>
+			<td>
+				<input type="submit"  value="Search" >
+			</td>
+		</tr>
+	</table>
+	</spr:form>
+
+
+</body>
+</html>

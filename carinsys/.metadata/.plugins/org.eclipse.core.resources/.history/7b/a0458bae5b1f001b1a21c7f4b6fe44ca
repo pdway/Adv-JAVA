@@ -1,0 +1,90 @@
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="spr" %>
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<spr:form action="car_update.htm" method="post" commandName="car" >
+	<table align="center" >
+		<tr>
+			<td>
+				
+			</td>
+			<td>
+				<spr:hidden path="carNo"/>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				License No.:
+			</td>
+			<td>
+				<spr:input path="licNo"/>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				Source:
+			</td>
+			<td>
+				<spr:input path="Source"/>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				Category:
+			</td>
+			<td>
+				<spr:input path="Category"/>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				Manufacturer:
+			</td>
+			<td>
+				<spr:input path="Manufacturer"/>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				Color:
+			</td>
+			<td>
+				<spr:input path="Colour"/>
+			</td>
+		</tr>
+		
+		
+		<tr>
+			<td>
+				Owner Name:
+			</td>
+			<td>
+				<spr:input path="ownerName"/>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				<a href="car_list.htm" >Back</a>
+			</td>
+			<td>
+				<input type="submit" value="Update" >
+			</td>
+		</tr>
+	</table>
+	</spr:form>
+
+</body>
+</html>

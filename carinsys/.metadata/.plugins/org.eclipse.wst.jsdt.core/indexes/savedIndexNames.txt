@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+F:\carinsys\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+769755882.index
+3138853683.index
+1874640684.index
+573103639.index
+323784490.index
+2197669018.index

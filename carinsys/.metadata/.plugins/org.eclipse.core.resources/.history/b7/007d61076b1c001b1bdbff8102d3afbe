@@ -1,0 +1,84 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://www.springframework.org/tags/form" prefix="spr" %> 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<spr:form action="add_user.htm" method="post" commandName="user" >
+	<table align="center" >
+		<tr>
+			<td>
+				License No.:
+			</td>
+			<td>
+				<spr:input path="licNo"/>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Username:
+			</td>
+			<td>
+				<spr:input path="userName"/>
+			</td>
+		</tr>
+		<tr>
+			<td>
+					Gender:
+			</td>
+			<td>
+				<spr:select path=" Gender">
+				
+				       <spr:option value="Male">Male</spr:option>
+						<spr:option value="Female">Female</spr:option>
+						<spr:option value="Trans">Trans</spr:option>
+					
+				
+				</spr:select>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Nationality:
+			</td>
+			<td>
+				<spr:select path="Nationality">
+				       <spr:option value="India">India</spr:option>
+						<spr:option value="Australia">Australia</spr:option>
+						<spr:option value="WestIndies">WestIndies</spr:option>
+					
+				
+				</spr:select>
+				
+				
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Mobile NO.:
+			</td>
+			<td>
+				<spr:input path="mobNo"/>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="userpage.jsp" >Back</a>
+			</td>
+			<td>
+				<input type="submit"  value="add new user" >
+			</td>
+		</tr>
+	</table>
+	</spr:form>
+</body>
+</html>
+
+
+
+
+	

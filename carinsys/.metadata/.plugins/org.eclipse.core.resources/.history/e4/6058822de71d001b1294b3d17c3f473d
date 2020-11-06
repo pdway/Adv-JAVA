@@ -1,0 +1,105 @@
+ <%@ taglib uri="http://www.springframework.org/tags/form" prefix="spr" %> 
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<spr:form action="add_user.htm" method="post" commandName="user" >
+	<table align="center" >
+		<tr>
+			<td>
+				Car No. Plate:
+			</td>
+			<td>
+				<spr:input path="carNo"/>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				License No.:
+			</td>
+			<td>
+				<spr:input path="licNo"/>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				Source:
+			</td>
+			<td>
+				<spr:input path="Source"/>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				Category:
+			</td>
+			<td>
+				<spr:input path="Category"/>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				Manufacturer:
+			</td>
+			<td>
+				<spr:input path="Manufacturer"/>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				Color:
+			</td>
+			<td>
+				<spr:input path="Colour"/>
+			</td>
+		</tr>
+		
+		
+		<tr>
+			<td>
+				Owner Name:
+			</td>
+			<td>
+				<spr:input path="ownerName"/>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="userpage.jsp" >Back</a>
+			</td>
+			<td>
+				<input type="submit"  value="add new user" >
+			</td>
+		</tr>
+	</table>
+	</spr:form>
+
+
+</body>
+</html>
+
+@Column(name = "Car_no")
+	private String carNo;
+	@Column(name = "Source")
+	private String Source;
+	@Column(name = "Category")
+	private String Category;
+	@Column(name = "Manufacturer")
+	private String Manufacturer;
+	@Column(name = "Colour")
+	private String Colour;
+	@Column(name = "Owner_name")
+	private String ownerName;
+	@Column(name = "Lic_no")
+	private int licNo;

@@ -1,0 +1,121 @@
+package com.cdac.dao;
+import java.util.List;
+
+import org.hibernate.HibernateException;
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.orm.hibernate4.HibernateCallback;
+import org.springframework.orm.hibernate4.HibernateTemplate;
+import org.springframework.stereotype.Repository;
+import com.cdac.dto.Ins;
+
+@Repository
+public class InsDaoImple implements InsDao {
+
+	@Autowired
+	private HibernateTemplate hibernateTemplate;
+	
+	@Override
+	public void insertIns(Ins ins) {
+		
+		
+			hibernateTemplate.execute(new HibernateCallback<Void>() {
+
+				@Override
+				public Void doInHibernate(Session session) throws HibernateException {
+					Transaction tr = session.beginTransaction();
+					session.save(ins);
+					tr.commit();
+					session.flush();
+					session.close();
+					return null;
+				}
+				
+			});
+		}
+
+	@Override
+	public List<Ins> selectAll() {
+		List<Ins> insList = hibernateTemplate.execute(new HibernateCallback<List<Ins>>() {
+
+			@Override
+			public List<Ins> doInHibernate(Session session) throws HibernateException {
+				Transaction tr = session.beginTransaction();
+				Query q = session.createQuery("from Ins");
+				
+				List<Ins> li = q.list();
+				System.out.println(li); 
+				tr.commit();
+				session.flush();
+				session.close();
+				return li;
+			}
+			
+		});
+		return insList;
+	}
+
+	@Override
+	public void deleteIns(String insNo) {
+		hibernateTemplate.execute(new HibernateCallback<Void>() {
+
+			@Override
+			public Void doInHibernate(Session session) throws HibernateException {
+				Transaction tr = session.beginTransaction();
+				session.delete(new Ins(insNo));
+				tr.commit();
+				session.flush();
+				session.close();
+				return null;
+			}
+			
+		});
+		
+	}
+
+	@Override
+	public void updateIns(Ins ins) {
+		hibernateTemplate.execute(new HibernateCallback<Void>() {
+
+			@Override
+			public Void doInHibernate(Session session) throws HibernateException {
+				Transaction tr = session.beginTransaction();
+				
+			
+				session.update(ins);
+				
+				tr.commit();
+				session.flush();
+				session.close();
+				return null;
+			}
+			
+		});
+		
+	}
+
+	@Override
+	public Ins selectIns(String insNo) {
+		
+		Ins ins = hibernateTemplate.execute(new HibernateCallback<Ins>() {
+
+			@Override
+			public Ins doInHibernate(Session session) throws HibernateException {
+				Transaction tr = session.beginTransaction();
+				Ins ex = (Ins)session.get(Ins.class, insNo);
+				tr.commit();
+				session.flush();
+				session.close();
+				return ex;
+			}
+			
+		});
+		
+		return ins;
+		
+	}
+	
+
+}

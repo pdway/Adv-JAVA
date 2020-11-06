@@ -1,0 +1,8 @@
+package com.cdac.dao;
+import com.cdac.dto.User;
+import java.util.List;
+public interface UserDao {
+
+	void insertUser(User user);
+	List<User> selectAll(int licNo);
+}

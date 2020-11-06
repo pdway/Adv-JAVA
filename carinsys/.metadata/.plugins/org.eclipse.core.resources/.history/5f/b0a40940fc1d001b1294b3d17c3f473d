@@ -1,0 +1,44 @@
+package com.cdac.cntr;
+import javax.servlet.http.HttpSession;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.cdac.dto.Car;
+import com.cdac.service.CarService;
+import java.util.List;
+
+
+@Controller
+public class CarController {
+
+	@Autowired
+	private CarService carService;
+	
+	@RequestMapping(value = "/prep_add_car_form1.htm",method = RequestMethod.GET)
+	public String prepRegcar(ModelMap map) {
+		map.put("car", new Car());
+		return "addcar";
+	}
+	
+	@RequestMapping(value = "/add_car.htm",method = RequestMethod.POST)
+	public String register(Car car,ModelMap map) {
+		carService.addCar(car);
+		return "carpage";
+	}
+	
+	@RequestMapping(value="/car_list.htm",method = RequestMethod.GET)
+	public String showcourse(ModelMap map) {
+		List<Car> li=carService.selectAll();
+		
+		map.put("carList", li);
+		
+		return "carlist";
+	}
+	
+}

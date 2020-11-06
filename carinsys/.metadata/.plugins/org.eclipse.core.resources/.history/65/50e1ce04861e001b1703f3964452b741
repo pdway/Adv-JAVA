@@ -1,0 +1,38 @@
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="spr" %> 
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+welcome to home.
+<table align="center" >
+		
+		
+		<tr>
+			<td> <a href="userpage.jsp" >User Details</a> </td>
+		</tr>
+		<tr>
+			<td> <a href="carpage.jsp" >Car Details</a> </td>
+		</tr>
+		<tr>
+			<td> <a href="inspage.jsp" >Insurance Details</a> </td>
+		</tr>
+		
+		<tr>
+			<td> <a href="search.jsp" >search all</a> </td>
+		</tr>
+		
+		
+		<tr>
+			<td> <a href="logout.htm" >Logout</a> </td>
+		</tr>
+	</table>
+
+
+</body>
+</html>

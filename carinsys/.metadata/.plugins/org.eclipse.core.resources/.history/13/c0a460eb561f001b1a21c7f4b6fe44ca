@@ -1,0 +1,73 @@
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="spr" %> 
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<spr:form action="ins_update.htm" method="post" commandName="ins" >
+	<table align="center" >
+		<tr>
+			<td>
+				
+			</td>
+			<td>
+				<spr:hidden path="insNo"/>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				License NO.:
+			</td>
+			<td>
+				<spr:input path="licNo"/>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				Provider:
+			</td>
+			<td>
+				<spr:input path="Provider"/>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				Ins. valid Date:
+			</td>
+			<td>
+				<spr:input path="InsValidDate"/>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				Ins. Holder Name:
+			</td>
+			<td>
+				<spr:input path="InsHolder"/>
+			</td>
+		</tr>
+		
+		
+		
+		<tr>
+			<td>
+				<a href="inslist.htm" >Back</a>
+			</td>
+			<td>
+				<input type="submit" value="Update" >
+			</td>
+		</tr>
+	</table>
+	</spr:form>
+
+</body>
+</html>

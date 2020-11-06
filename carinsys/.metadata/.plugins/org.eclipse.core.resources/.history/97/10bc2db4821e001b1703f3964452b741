@@ -1,0 +1,30 @@
+ <%@ taglib uri="http://www.springframework.org/tags/form" prefix="spr" %> 
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<form action="search_car.htm" method="post" >
+<table style="text-align: center; padding: 10px">
+<tr><td>
+Carno:<input type="text" placeholder=" adminname" name="carNo" required="required">
+</td>
+</tr>
+
+<tr><td>
+<button>search</button>
+</td>
+</tr>
+</table>
+</form>
+
+
+</body>
+</html>
+

@@ -1,0 +1,70 @@
+package com.cdac.dto;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "userv")
+public class User {
+	@Id
+	@Column(name = "Lic_no")
+	private int licNo;
+	@Column(name = "user_name")
+	private String userName;
+	@Column(name = "Gender")
+	private String Gender;
+	@Column(name = "Nationality")
+	private String Nationality;
+	@Column(name = "Mob_No")
+	private String mobNo ;
+	
+	public User() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public int getLicNo() {
+		return licNo;
+	}
+
+	public void setLicNo(int licNo) {
+		this.licNo = licNo;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public String getGender() {
+		return Gender;
+	}
+
+	public void setGender(String gender) {
+		Gender = gender;
+	}
+
+	public String getNationality() {
+		return Nationality;
+	}
+
+	public void setNationality(String nationality) {
+		Nationality = nationality;
+	}
+
+	public String getMobNo() {
+		return mobNo;
+	}
+
+	public void setMobNo(String mobNo) {
+		this.mobNo = mobNo;
+	}
+	
+	
+
+}

@@ -1,0 +1,8 @@
+package com.cdac.service;
+import com.cdac.dto.Ins;
+import java.util.List;
+public interface InsService {
+
+
+	void addIns(Ins ins);
+}

@@ -1,0 +1,60 @@
+<%@page import="com.cdac.dto.User"%>
+<%@page import="java.util.List"%>
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<table align="center" >
+		
+		
+		
+		
+		<% 
+		List<User> elist = (List<User>)request.getAttribute("userList");
+		for(User exp : elist){
+		%>
+		<tr>
+			<td>
+			<%=exp.getLicNo()%>
+			 </td>
+			 <br>
+			 
+			 <td>
+			<%=exp.getUserName()%>
+			 </td>
+			  <br>
+			  <td>
+			<%=exp.getGender()%>
+			 </td>
+			  <br>
+			  <td>
+			<%=exp.getNationality()%>
+			 </td>
+			  <br>
+			  <td>
+			<%=exp.getMobNo()%>
+			 </td>
+			 <br>
+			<td>
+				<a href="user_delete.htm?licNo=<%=exp.getLicNo()%>">Delete</a>
+			</td>
+			 <br>
+			<td>
+				<a href="user_update_form.htm?licNo=<%=exp.getLicNo()%>">Update</a>
+			</td>
+			
+		</tr>
+		<% } %>
+		<tr>
+		
+	</table>
+
+</body>
+</html>

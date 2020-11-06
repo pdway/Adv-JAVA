@@ -1,0 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+welcome to home.
+<table align="center" >
+		
+		
+		<tr>
+			<td> <a href="prep_add_user_form.htm" >User Details</a> </td>
+		</tr>
+		<tr>
+			<td> <a href="#" >Vehicle Details</a> </td>
+		</tr>
+		<tr>
+			<td> <a href="#" >Insurance Details</a> </td>
+		</tr>
+		<tr>
+			<td> <a href="#" >Search all</a> </td>
+		</tr>
+		<tr>
+			<td> <a href="#" >Logout</a> </td>
+		</tr>
+	</table>
+
+
+</body>
+</html>

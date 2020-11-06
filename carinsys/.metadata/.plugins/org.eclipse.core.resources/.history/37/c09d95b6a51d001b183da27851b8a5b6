@@ -1,0 +1,72 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="spr" %>     
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<spr:form action="add_ins.htm" method="post" commandName="ins" >
+	<table align="center" >
+		<tr>
+			<td>
+				Insurance No.:
+			</td>
+			<td>
+				<spr:input path="insNo"/>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				License No.:
+			</td>
+			<td>
+				<spr:input path="userv"/>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				Provider:
+			</td>
+			<td>
+				<spr:input path="Provider"/>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				Ins. Valid Date:
+			</td>
+			<td>
+				<spr:input path="InsValidDate"/>
+			</td>
+		</tr>
+		
+		
+		<tr>
+			<td>
+				Insurance Holder:
+			</td>
+			<td>
+				<spr:input path="InsHolder"/>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="inspage.jsp" >Back</a>
+			</td>
+			<td>
+				<input type="submit"  value="add new Insurance" >
+			</td>
+		</tr>
+	</table>
+	</spr:form>
+
+</body>
+</html>
+

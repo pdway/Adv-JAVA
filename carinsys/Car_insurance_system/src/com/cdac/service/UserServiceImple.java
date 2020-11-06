@@ -1,0 +1,55 @@
+package com.cdac.service;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cdac.dao.UserDao;
+import com.cdac.dto.User;
+
+@Service
+public class UserServiceImple implements UserService {
+
+	@Autowired
+	private UserDao userDao;
+	
+	@Override
+	public void addUser(User user) {
+	
+		userDao.insertUser(user);
+	}
+
+	@Override
+	public List<User> selectAll() {
+		
+		return userDao.selectAll();
+	}
+
+	@Override
+	public void removeUser(int licNo) {
+		userDao.deleteUser(licNo);
+		
+	}
+
+	@Override
+	public void modifyUser(User user) {
+		userDao.updateUser(user);
+	}
+
+	@Override
+	public User findUser(int licNo) {
+		return userDao.selectUser(licNo);
+	}
+
+	@Override
+	public List<User> oneUser(int licNo) {
+		return userDao.selectoneUser(licNo);
+	}
+
+	
+
+	
+
+	
+	
+}
